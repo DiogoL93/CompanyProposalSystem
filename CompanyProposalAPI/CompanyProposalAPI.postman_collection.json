@@ -1,0 +1,134 @@
+{
+	"info": {
+		"_postman_id": "1a2b3c4d-5e6f-7g8h-9i0j-1k2l3m4n5o6p",
+		"name": "Company Proposal API",
+		"description": "Collection for testing the Company Proposal System API endpoints",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Managing",
+			"description": "Managing endpoints for proposals and items",
+			"item": [
+				{
+					"name": "View Proposals for Item",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:5000/api/managing/proposals/1",
+							"protocol": "http",
+							"host": ["localhost"],
+							"port": "5000",
+							"path": ["api", "managing", "proposals", "1"]
+						}
+					}
+				},
+				{
+					"name": "Create Proposal",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"description\": \"New Proposal\",\n    \"itemId\": 1,\n    \"totalValue\": 1000.00,\n    \"valueType\": \"Amount\",\n    \"currency\": \"USD\"\n}"
+						},
+						"url": {
+							"raw": "http://localhost:5000/api/managing/proposal",
+							"protocol": "http",
+							"host": ["localhost"],
+							"port": "5000",
+							"path": ["api", "managing", "proposal"]
+						}
+					}
+				},
+				{
+					"name": "Create Counter Proposal",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"description\": \"Counter Proposal\",\n    \"itemId\": 1,\n    \"totalValue\": 1200.00,\n    \"valueType\": \"Amount\",\n    \"currency\": \"USD\"\n}"
+						},
+						"url": {
+							"raw": "http://localhost:5000/api/managing/proposal/1/counter",
+							"protocol": "http",
+							"host": ["localhost"],
+							"port": "5000",
+							"path": ["api", "managing", "proposal", "1", "counter"]
+						}
+					}
+				},
+				{
+					"name": "Accept Proposal",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:5000/api/managing/proposal/1/accept",
+							"protocol": "http",
+							"host": ["localhost"],
+							"port": "5000",
+							"path": ["api", "managing", "proposal", "1", "accept"]
+						}
+					}
+				},
+				{
+					"name": "Get Company Items",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:5000/api/managing/items?name=test&createdAfter=2024-01-01&createdBefore=2024-12-31&minPrice=100&maxPrice=1000&sortBy=name&sortDescending=false",
+							"protocol": "http",
+							"host": ["localhost"],
+							"port": "5000",
+							"path": ["api", "managing", "items"],
+							"query": [
+								{
+									"key": "name",
+									"value": "test"
+								},
+								{
+									"key": "createdAfter",
+									"value": "2024-01-01"
+								},
+								{
+									"key": "createdBefore",
+									"value": "2024-12-31"
+								},
+								{
+									"key": "minPrice",
+									"value": "100"
+								},
+								{
+									"key": "maxPrice",
+									"value": "1000"
+								},
+								{
+									"key": "sortBy",
+									"value": "name"
+								},
+								{
+									"key": "sortDescending",
+									"value": "false"
+								}
+							]
+						}
+					}
+				}
+			]
+		}
+	]
+} 

@@ -1,0 +1,12 @@
+{
+  "Version": 1,
+  "Hash": "OCTtSwt1DSDuBhmE7Om7c3qmF9AVZZMYed7t4uBAlWE=",
+  "Source": "CompanyProposalAPI",
+  "BasePath": "_content/CompanyProposalAPI",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": [],
+  "Endpoints": []
+}
